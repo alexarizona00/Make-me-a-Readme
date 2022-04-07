@@ -2,7 +2,23 @@ const fs = require('fs')
 
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge() {
+  switch(`${answers.license}`) {
+    case 'Apache License 2.0':
+      // code block
+      break;
+    case 'GNU GPLv3':
+      // code block
+      break;
+    case 'MIT':
+      break;
+    case 'ISC License':
+      break;
+    case 'GNU GPLv2':
+      break;
+    default:
+      // code block
+}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
@@ -54,4 +70,6 @@ console.log(finalData)
 
 }
 
-module.exports = generateMarkdown;
+module.exports = generateMarkdown
+
+module.exports = renderLicenseBadge
