@@ -18,11 +18,37 @@ function renderLicenseSection(license) {}
 
 function generateMarkdown(answers) {
 
-let finalData = `Hi my name is ${answers.username} and this is the name of my project \n`
+let finalData = `#${answers.pname}
+
+## Description
+${answers.pdescript}
+
+## Installation
+${answers.install}
+
+## Usage
+${answers.examples}
+
+## Credits 
+${answers.credits}
+
+
+## License
+${answers.license}
+
+## Features
+${answers.features}
+
+## How to Contribute
+${answers.contribute}
+
+## Tests
+${answers.tests}
+`
 
 console.log(finalData)
 
-  fs.writeFile(`${answers.pname} readme.MD`, finalData,(err) =>
+  fs.writeFile(`${answers.pname} readme.md`, finalData,(err) =>
   err ? console.error(err) : console.log('Success!'));
 
 

@@ -15,7 +15,7 @@ const questions = [
     {
         type: 'input',
         message: 'Describe your project.',
-        name: 'description',
+        name: 'pdescript',
     },
     // {
     //     type: 'list',
@@ -31,7 +31,7 @@ const questions = [
     {
         type: 'input',
         message: 'Provide examples for use.',
-        name: 'usage',
+        name: 'examples',
     },
     {
         type: 'input',
@@ -43,6 +43,21 @@ const questions = [
         message: 'Select Licenses',
         name: 'license',
         choices: ['Apache License 2.0', 'GNU GPLv3', 'MIT', 'ISC License', 'GNU GPLv2',],
+    },
+    {
+        type: 'input',
+        message: 'List any notable features.',
+        name: 'features',
+    },
+    {
+        type: 'input',
+        message: 'Any ways you would like other devs to contribute?',
+        name: 'contribute',
+    },
+    {
+        type: 'input',
+        message: 'Paste any tests that the end user can utilize',
+        name: 'tests',
     },
 ];
 
@@ -66,9 +81,9 @@ inquirer
   
 
 // TODO: Create a function to initialize app
-function init() {
+// function init() {
 
-};
+// };
 
-// Function call to initialize app
-init();
+// // Function call to initialize app
+// init();
