@@ -1,7 +1,9 @@
 // TODO: Include packages needed for this application
 const fs = require('fs')
 var inquirer = require('inquirer');
+const renderLicenseBadge = require('./utils/generateMarkdown');
 const generateMarkdown = require('./utils/generateMarkdown');
+let licenseBadge = '';
 
 
 // placing various objects and arrays here for reference in prompts later
@@ -17,12 +19,11 @@ const questions = [
         message: 'Describe your project.',
         name: 'pdescript',
     },
-    // {
-    //     type: 'list',
-    //     message: 'Please select table of contents.',
-    //     name: 'tableOC',
-    //     choices: ['Installation'('#installation'), 'Usage'('#usage'), 'Credits'('#credits'), 'License'('#license')],
-    // },
+    {
+        type: 'input',
+        message: 'What is your github username?',
+        name: 'github',
+    },
     {
         type: 'input',
         message: 'Provide installation steps.',
@@ -39,7 +40,7 @@ const questions = [
         name: 'credits',
     },
     {
-        type: 'checkbox',
+        type: 'list',
         message: 'Select Licenses',
         name: 'license',
         choices: ['Apache License 2.0', 'GNU GPLv3', 'MIT', 'ISC License', 'GNU GPLv2',],
@@ -64,26 +65,15 @@ const questions = [
 // let fileName = `${answers.pname}.md`
 
 inquirer
-  .prompt([
-    ...questions
-  ])
-  .then((answers) => {
-      console.log(answers.pname)
-    
+    .prompt([
+        ...questions
+    ])
+    .then((answers) => {
+        
+        fs.writeFile(`${answers.pname}.json`, JSON.stringify(answers), (err) =>
+            err ? console.error(err) : console.log('Success!'))
             
-    fs.writeFile(`${answers.pname}.json`, JSON.stringify(answers),(err) =>
-     err ? console.error(err) : console.log('Success!'))
+        generateMarkdown(answers)
+    });
 
 
-     generateMarkdown(answers)
-  });
-  
-  
-
-// TODO: Create a function to initialize app
-// function init() {
-
-// };
-
-// // Function call to initialize app
-// init();
