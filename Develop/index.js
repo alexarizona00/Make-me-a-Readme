@@ -36,7 +36,7 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'List your collaborators, any third-party assests, or any other features.',
+        message: 'List your collaborators, any third-party assets, or any other features.',
         name: 'credits',
     },
     {
