@@ -106,23 +106,24 @@ function generateMarkdown(answers) {
   ${licenseBadge} 
 
   ## Table of Contents
-    [Description](#description)
 
-    [Installation](#installation)
+  [Description](#description)
 
-    [Usage](#usage)
+  [Installation](#installation)
 
-    [Credits](#credits)
+  [Usage](#usage)
 
-    [License](#license)
+  [Credits](#credits)
 
-    [Features](#features)
+  [License](#license)
 
-    [Questions](#questions)
+  [Features](#features)
 
-    [Contribute](#contribute)
+  [Questions](#questions)
 
-    [Testing](#testing)
+  [Contribute](#contribute)
+
+  [Testing](#testing)
 
 
 # Description

@@ -69,10 +69,7 @@ inquirer
         ...questions
     ])
     .then((answers) => {
-        
-        fs.writeFile(`${answers.pname}.json`, JSON.stringify(answers), (err) =>
-            err ? console.error(err) : console.log('Success!'))
-            
+                  
         generateMarkdown(answers)
     });
 
