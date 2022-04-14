@@ -26,16 +26,21 @@
 
 
 # Description
-This is a terminal application that generates readme files
+This is a terminal application that generates readme files with built in license badge functionality and clickable table of content links. 
 
 # Installation
 clone the repo
-
+run "npm i" and your ready to go!
 # Usage
-making any kind of project related readme file
+"$ node index.js"
+
+watch this walk through:
+ https://drive.google.com/file/d/1TriwmADFLZKfXaJg-BsfGLqMGYfsprSO/view
+
+
 
 # Credits 
-inquirer.js 
+the late great deep patel!
 
 
 # License
